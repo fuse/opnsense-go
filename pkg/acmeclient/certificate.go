@@ -11,7 +11,7 @@ import (
 var CertificateOpts = api.ReqOpts{
 	AddEndpoint:         "/acmeclient/certificates/add",
 	GetEndpoint:         "/acmeclient/certificates/get",
-	UpdateEndpoint:      "/acmeclient/certificates/set",
+	UpdateEndpoint:      "/acmeclient/certificates/update",
 	DeleteEndpoint:      "/acmeclient/certificates/del",
 	ReconfigureEndpoint: acmeclientReconfigureEndpoint,
 	Monad:               "certificate",

@@ -11,7 +11,7 @@ import (
 var ValidationOpts = api.ReqOpts{
 	AddEndpoint:         "/acmeclient/validations/add",
 	GetEndpoint:         "/acmeclient/validations/get",
-	UpdateEndpoint:      "/acmeclient/validations/set",
+	UpdateEndpoint:      "/acmeclient/validations/update",
 	DeleteEndpoint:      "/acmeclient/validations/del",
 	ReconfigureEndpoint: acmeclientReconfigureEndpoint,
 	Monad:               "validation",

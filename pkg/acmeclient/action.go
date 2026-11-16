@@ -11,7 +11,7 @@ import (
 var ActionOpts = api.ReqOpts{
 	AddEndpoint:         "/acmeclient/actions/add",
 	GetEndpoint:         "/acmeclient/actions/get",
-	UpdateEndpoint:      "/acmeclient/actions/set",
+	UpdateEndpoint:      "/acmeclient/actions/update",
 	DeleteEndpoint:      "/acmeclient/actions/del",
 	ReconfigureEndpoint: acmeclientReconfigureEndpoint,
 	Monad:               "action",

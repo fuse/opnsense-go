@@ -8,7 +8,7 @@ resources:
     endpoints:
       add: "/acmeclient/accounts/add"
       get: "/acmeclient/accounts/get"
-      update: "/acmeclient/accounts/set"
+      update: "/acmeclient/accounts/update"
       delete: "/acmeclient/accounts/del"
     attrs:
       - name: Enabled
@@ -51,7 +51,7 @@ resources:
     endpoints:
       add: "/acmeclient/validations/add"
       get: "/acmeclient/validations/get"
-      update: "/acmeclient/validations/set"
+      update: "/acmeclient/validations/update"
       delete: "/acmeclient/validations/del"
     attrs:
       - name: Enabled
@@ -928,7 +928,7 @@ resources:
     endpoints:
       add: "/acmeclient/certificates/add"
       get: "/acmeclient/certificates/get"
-      update: "/acmeclient/certificates/set"
+      update: "/acmeclient/certificates/update"
       delete: "/acmeclient/certificates/del"
     attrs:
       - name: Enabled
@@ -995,7 +995,7 @@ resources:
     endpoints:
       add: "/acmeclient/actions/add"
       get: "/acmeclient/actions/get"
-      update: "/acmeclient/actions/set"
+      update: "/acmeclient/actions/update"
       delete: "/acmeclient/actions/del"
     attrs:
       - name: Enabled
