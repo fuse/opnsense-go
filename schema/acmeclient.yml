@@ -1261,6 +1261,78 @@ resources:
         key: acme_jetkvm_reboot
 
 rpc:
+  - name: Settings
+    filename: settings
+    customTypes:
+      SettingsMonad:
+        - name: Acmeclient
+          type: SettingsWrapper
+          key: acmeclient
+      SettingsWrapper:
+        - name: Settings
+          type: Settings
+          key: settings
+      Settings:
+        - name: Enabled
+          type: string
+          key: enabled
+        - name: AutoRenewal
+          type: string
+          key: autoRenewal
+        - name: UpdateCron
+          type: SelectedMap
+          key: UpdateCron
+        - name: Environment
+          type: SelectedMap
+          key: environment
+        - name: ChallengePort
+          type: string
+          key: challengePort
+        - name: TLSChallengePort
+          type: string
+          key: TLSchallengePort
+        - name: RestartTimeout
+          type: string
+          key: restartTimeout
+        - name: HaproxyIntegration
+          type: string
+          key: haproxyIntegration
+        - name: HaproxyAclRef
+          type: SelectedMap
+          key: haproxyAclRef
+        - name: HaproxyActionRef
+          type: SelectedMap
+          key: haproxyActionRef
+        - name: HaproxyServerRef
+          type: SelectedMap
+          key: haproxyServerRef
+        - name: HaproxyBackendRef
+          type: SelectedMap
+          key: haproxyBackendRef
+        - name: LogLevel
+          type: SelectedMap
+          key: logLevel
+        - name: ShowIntro
+          type: string
+          key: showIntro
+      SettingsSetResult:
+        - name: Result
+          type: string
+          key: result
+    rpc_calls:
+      - name: Get
+        method: GET
+        endpoint: "/acmeclient/settings/get"
+        result_type: SettingsMonad
+      - name: Set
+        method: POST
+        endpoint: "/acmeclient/settings/set"
+        params:
+          - name: acmeclient
+            optional: false
+            bodyParameter: true
+            customType: SettingsWrapper
+        result_type: SettingsSetResult
   - name: Service
     filename: service
     rpc_calls:
