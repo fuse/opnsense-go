@@ -25,6 +25,15 @@ type Vip struct {
 	Network     string          `json:"network"`
 	Description string          `json:"descr"`
 	Gateway     string          `json:"gateway"`
+	Password    string          `json:"password"`
+	Vhid        string          `json:"vhid"`
+	Advbase     string          `json:"advbase"`
+	Advskew     string          `json:"advskew"`
+	Nobind      string          `json:"nobind"`
+	Noexpand    string          `json:"noexpand"`
+	Nosync      string          `json:"nosync"`
+	Peer        string          `json:"peer"`
+	Peer6       string          `json:"peer6"`
 }
 
 // CRUD operations
