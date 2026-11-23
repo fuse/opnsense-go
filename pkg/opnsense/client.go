@@ -20,6 +20,7 @@ import (
 	"github.com/browningluke/opnsense-go/pkg/openvpn"
 	"github.com/browningluke/opnsense-go/pkg/quagga"
 	"github.com/browningluke/opnsense-go/pkg/routes"
+	"github.com/browningluke/opnsense-go/pkg/routing"
 	"github.com/browningluke/opnsense-go/pkg/syslog"
 	"github.com/browningluke/opnsense-go/pkg/trust"
 	"github.com/browningluke/opnsense-go/pkg/unbound"
@@ -44,6 +45,7 @@ type Client interface {
 	Openvpn() *openvpn.Controller
 	Quagga() *quagga.Controller
 	Routes() *routes.Controller
+	Routing() *routing.Controller
 	Syslog() *syslog.Controller
 	Trust() *trust.Controller
 	Unbound() *unbound.Controller
@@ -121,6 +123,10 @@ func (c *client) Quagga() *quagga.Controller {
 
 func (c *client) Routes() *routes.Controller {
 	return &routes.Controller{Api: c.a}
+}
+
+func (c *client) Routing() *routing.Controller {
+	return &routing.Controller{Api: c.a}
 }
 
 func (c *client) Syslog() *syslog.Controller {
